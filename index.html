@@ -4,22 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main-style.css" />
+    <script
+      src="https://kit.fontawesome.com/7e130c80aa.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Students</title>
   </head>
   <body>
     <header>
-      <nav>
-        <a>CMS</a>
-        <ul>
-          <li>
-            <a href="#"><img src="img/notifications.png" /></a>
-          </li>
-          <li class="profile">
-            <img class="profile-img" src="img/avatar.png" />
-            <a class="profile-item" href="#">Name</a>
-          </li>
-        </ul>
-      </nav>
+      <h1>CMS</h1>
+      <ul>
+        <li>
+          <div>
+            <button type="button" id="btnNotification">
+              <img src="img/notifications2.png" class="notifications" />
+            </button>
+          </div>
+          <!-- <i class="fa-regular fa-bell"></i> -->
+        </li>
+        <li class="profile">
+          <!-- <i class="fa-regular fa-user"></i> -->
+          <img src="img/avatar.png" class="profile-img" />
+          <a class="profile-item" href="#">Name</a>
+        </li>
+      </ul>
     </header>
+    <main>
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html" class="this-page">Students</a></li>
+            <li><a href="#">Tasks</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="table-container">
+        <h2>Students</h2>
+        <table>
+          <tr>
+            <th><input type="checkbox" name="head-checkbox" /></th>
+            <th>Group</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+            <th>Status</th>
+            <th>Options</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="checkbox" />
+            </td>
+            <td>PZ-26</td>
+            <td>Stanislav</td>
+            <td>Male</td>
+            <td>01.10.2005</td>
+            <td class="status-bull active">&bull;</td>
+            <td>
+              <div>
+                <button type="button" id="btnEdit">&#9998;</button>
+                <button type="button" id="btnDelete">
+                  <span>&times;</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr></tr>
+        </table>
+      </div>
+    </main>
   </body>
 </html>
