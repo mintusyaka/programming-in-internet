@@ -110,6 +110,7 @@ main nav li {
 .table-div {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: 10px;
 }
 
@@ -173,6 +174,7 @@ td div button {
   background-color: inherit;
   width: 15px;
   height: 15px;
+  margin-left: auto;
 }
 
 .table-container button {
@@ -181,15 +183,6 @@ td div button {
   justify-content: space-around;
   text-align: center;
   margin: 5px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.row-for-add-button {
-  border: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -288,6 +281,23 @@ td div button {
     align-items: center;
     justify-content: space-around;
     text-align: center;
+  }
+
+  #btnAdd {
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+  }
+
+  .table-container button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 5px;
   }
 }
 
