@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Mintus Stanislav" />
     <link rel="stylesheet" href="styles/smartphone-style.css" />
     <!-- <script
       src="https://kit.fontawesome.com/7e130c80aa.js"
@@ -11,41 +12,65 @@
     <title>Students</title>
   </head>
   <body>
-
     <dialog id="add-new-student">
-        <div class="header-of-dialog">
-          <h2>Add student</h2>
-          <button class="close">X</button>
-        </div>
-        <div class="form">
-          <table>
-            <tr>
-              <td><p>Group</p></td>
-              <td><select name="group"></select></td>
-            </tr>
-            <tr>
-              <td><p>First Name</p></td>
-              <td><input type="text" name="first-name"></td>
-            </tr>
-            <tr>
-              <td><p>Last Name</p></td>
-              <td><input type="text" name="second-name"></td>
-            </tr>
-            <tr>
-              <td><p>Gender</p></td>
-              <td><select name="gender"></select></td>
-            </tr>
-            <tr>
-              <td><p>Birthday</p></td>
-              <td><input type="date" name="birthday"></td>
-            </tr>
-          </table>
-        </div>
-        <div class="footer-of-dialog">
-          <button class="ok">CREATE</button>
-          <button class="close">CANCEL</button>
-
-        </div>
+      <div class="header-of-dialog">
+        <h2>Add student</h2>
+        <button type="button" class="close">X</button>
+      </div>
+      <div class="form">
+        <table>
+          <tr>
+            <td><p>Group</p></td>
+            <td>
+              <select name="group">
+                <option value="1">PZ-16</option>
+                <option value="2">PZ-26</option>
+                <option value="3">BD-26</option>
+                <option value="4">PZ-11</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><p>First Name</p></td>
+            <td>
+              <input
+                type="text"
+                name="first-name"
+                required
+                aria-label="First Name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><p>Last Name</p></td>
+            <td>
+              <input
+                type="text"
+                name="second-name"
+                required
+                aria-label="Second Name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><p>Sex</p></td>
+            <td>
+              <select name="sex">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Birthday</p></td>
+            <td><input type="date" name="birthday" aria-label="Birthday" /></td>
+          </tr>
+        </table>
+      </div>
+      <div class="footer-of-dialog">
+        <button type="submit" class="ok" id="btnOkAddStudent">CREATE</button>
+        <button type="button" class="close">CANCEL</button>
+      </div>
     </dialog>
 
     <header>
@@ -54,15 +79,19 @@
         <li>
           <div>
             <button type="button" id="btnNotification">
-              <img src="img/notifications2.png" class="notifications" />
+              <img
+                src="img/notifications2.png"
+                class="notifications"
+                alt="Notifications"
+              />
             </button>
           </div>
           <!-- <i class="fa-regular fa-bell"></i> -->
         </li>
         <li class="profile">
           <!-- <i class="fa-regular fa-user"></i> -->
-          <img src="img/avatar.png" class="profile-img" />
-          <a class="profile-item" href="#">Name</a>
+          <img src="img/avatar.png" class="profile-img" alt="Profile IMG" />
+          <a class="profile-item" href="#">Stanislav Mintus</a>
         </li>
       </ul>
     </header>
@@ -78,21 +107,26 @@
       </div>
       <div class="table-container">
         <h2>Students</h2>
-        <div class="table-div">
         <button type="button" id="btnAdd">+</button>
-        <table>
+        <table id="table-students">
           <tr>
-            <th><input type="checkbox" name="head-checkbox" /></th>
+            <th>
+              <input
+                type="checkbox"
+                name="head-checkbox"
+                aria-label="checkbox"
+              />
+            </th>
             <th>Group</th>
             <th>Name</th>
-            <th>Gender</th>
+            <th>Sex</th>
             <th>Birthday</th>
             <th>Status</th>
             <th>Options</th>
           </tr>
           <tr>
             <td>
-              <input type="checkbox" name="checkbox" />
+              <input type="checkbox" name="checkbox" aria-label="checkbox" />
             </td>
             <td>PZ-26</td>
             <td>Mintus Stanislav</td>
@@ -101,17 +135,17 @@
             <td class="status-bull active">&bull;</td>
             <td>
               <div>
-                <button type="button" id="btnEdit">&#9998;</button>
-                <button type="button" id="btnDelete">
+                <button type="button" class="btnEdit">&#9998;</button>
+                <button type="button" class="btnDelete">
                   <span>&times;</span>
                 </button>
               </div>
             </td>
           </tr>
-          <tr></tr>
         </table>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

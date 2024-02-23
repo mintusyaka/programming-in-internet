@@ -74,7 +74,7 @@ header ul li div {
   margin: 0;
   border-radius: 0.5rem;
   animation-name: blinking;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   /* position: absolute; */
 }
@@ -166,8 +166,8 @@ td div {
   justify-content: space-between;
 }
 
-#btnDelete,
-#btnEdit {
+.btnDelete,
+.btnEdit {
   cursor: pointer;
   appearance: none;
   background-color: inherit;
@@ -285,8 +285,8 @@ td div button {
     padding: 0;
   }
 
-  #btnDelete,
-  #btnEdit {
+  .btnDelete,
+  .btnEdit {
     cursor: pointer;
     appearance: none;
     background-color: inherit;
