@@ -4,13 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/smartphone-style.css" />
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/7e130c80aa.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <title>Students</title>
   </head>
   <body>
+
+    <dialog id="add-new-student">
+        <div class="header-of-dialog">
+          <h2>Add student</h2>
+          <button class="close">X</button>
+        </div>
+        <div class="form">
+          <table>
+            <tr>
+              <td><p>Group</p></td>
+              <td><select name="group"></select></td>
+            </tr>
+            <tr>
+              <td><p>First Name</p></td>
+              <td><input type="text" name="first-name"></td>
+            </tr>
+            <tr>
+              <td><p>Last Name</p></td>
+              <td><input type="text" name="second-name"></td>
+            </tr>
+            <tr>
+              <td><p>Gender</p></td>
+              <td><select name="gender"></select></td>
+            </tr>
+            <tr>
+              <td><p>Birthday</p></td>
+              <td><input type="date" name="birthday"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="footer-of-dialog">
+          <button class="ok">CREATE</button>
+          <button class="close">CANCEL</button>
+
+        </div>
+    </dialog>
+
     <header>
       <h1>CMS</h1>
       <ul>
@@ -33,9 +70,9 @@
       <div class="nav-container">
         <nav>
           <ul>
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
             <li><a href="index.html" class="this-page">Students</a></li>
-            <li><a href="#">Tasks</a></li>
+            <li><a href="pages/tasks.html">Tasks</a></li>
           </ul>
         </nav>
       </div>
@@ -58,7 +95,7 @@
               <input type="checkbox" name="checkbox" />
             </td>
             <td>PZ-26</td>
-            <td>Stanislav</td>
+            <td>Mintus Stanislav</td>
             <td>Male</td>
             <td>01.10.2005</td>
             <td class="status-bull active">&bull;</td>
@@ -75,5 +112,6 @@
         </table>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

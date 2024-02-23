@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -22,6 +22,10 @@ a {
 }
 
 a:visited {
+  color: black;
+}
+
+a:link {
   color: black;
 }
 
@@ -68,12 +72,29 @@ header ul li div {
 .notifications {
   height: 25px;
   margin: 0;
+  border-radius: 0.5rem;
+  animation-name: blinking;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* position: absolute; */
 }
+
+@keyframes blinking {
+  0% {
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+  }
+}
+
 #btnNotification {
   border: none;
   cursor: pointer;
   appearance: none;
   background-color: inherit;
+  /* position: relative; */
 }
 
 main {
@@ -101,7 +122,7 @@ main nav li {
 }
 
 .table-container {
-  margin: 30px;
+  margin: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,19 +132,18 @@ main nav li {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 10px;
 }
 
 table {
   border-collapse: collapse;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 td,
 th {
-  border: 2px solid black;
+  border: 1px solid black;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 td {
@@ -187,6 +207,7 @@ td div button {
 
 @media only screen and (min-width: 768px) {
   h2 {
+    font-size: 36px;
     text-align: left;
   }
 
@@ -244,6 +265,7 @@ td div button {
 
   .table-container {
     margin: 30px;
+    width: 70%;
   }
 
   .status-bull {
@@ -301,10 +323,62 @@ td div button {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1025px) {
   td {
     padding: 10px 30px;
     text-align: center;
     font-size: 24px;
+  }
+}
+
+#add-new-student {
+  left: 50%;
+  translate: -50% 50%;
+  width: 500px;
+}
+
+#add-new-student .header-of-dialog {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+  }
+}
+
+#add-new-student .form {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  table {
+    border: none;
+  }
+  table tr td {
+    border: none;
+    text-align: left;
+  }
+  select,
+  input {
+    width: 100%;
+  }
+}
+
+#add-new-student .footer-of-dialog {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    margin: 0 0.5rem;
+    padding: 1%;
   }
 }
