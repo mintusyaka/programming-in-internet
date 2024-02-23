@@ -38,7 +38,7 @@ btnOkAddStudent.addEventListener("click", () => {
 
   const newRow = document.createElement("tr");
   let newTd = document.createElement("td");
-
+  let st = "fdsfd" + newTd + "nnjjj";
   let newEl = document.createElement("input");
   newEl.setAttribute("type", "checkbox");
   newEl.setAttribute("name", "checkbox");
@@ -59,7 +59,8 @@ btnOkAddStudent.addEventListener("click", () => {
   newRow.appendChild(newTd);
 
   newTd = document.createElement("td");
-  newTd.innerHTML = formattedDate;
+  // newTd.innerHTML = formattedDate;
+
   newRow.appendChild(newTd);
 
   newTd = document.createElement("td");

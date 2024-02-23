@@ -319,7 +319,7 @@ td div button {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1100px) {
   td {
     padding: 10px 30px;
     text-align: center;
