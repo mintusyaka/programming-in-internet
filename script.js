@@ -16,13 +16,6 @@ btnAddStudent.addEventListener("click", () => {
 });
 
 btnOkAddStudent.addEventListener("click", () => {
-  const dateInput = document.querySelector("input[name='birthday']").value;
-  const formattedDate = dayjs(dateInput).format("DD.MM.YYYY");
-  if (formattedDate == "Invalid Date") {
-    alert("Enter your birthday!");
-    return;
-  }
-
   const firstName = document.getElementsByName("first-name")[0];
   const secondName = document.getElementsByName("second-name")[0];
 
@@ -31,9 +24,14 @@ btnOkAddStudent.addEventListener("click", () => {
     secondName.hasAttribute("required")
   ) {
     if (firstName.value == "" || secondName.value == "") {
-      alert("Enter your name and surname!");
       return;
     }
+  }
+
+  const dateInput = document.querySelector("input[name='birthday']").value;
+  const formattedDate = dayjs(dateInput).format("DD.MM.YYYY");
+  if (formattedDate == "Invalid Date") {
+    return;
   }
 
   const table = document.getElementById("table-students");
@@ -87,6 +85,7 @@ btnOkAddStudent.addEventListener("click", () => {
   newBtn.appendChild(newSpan);
   newBtn.setAttribute("type", "button");
   newBtn.setAttribute("class", "btnDelete");
+  newBtn.setAttribute("onclick", "deleteStudent(this)");
   newEl.appendChild(newBtn);
 
   newTd.appendChild(newEl);
@@ -96,3 +95,7 @@ btnOkAddStudent.addEventListener("click", () => {
 
   addNewStudentDialog.close();
 });
+
+function deleteStudent(btn) {
+  btn.parentNode.parentNode.parentNode.remove();
+}
