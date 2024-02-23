@@ -80,12 +80,8 @@ header ul li div {
 }
 
 @keyframes blinking {
-  0% {
-  }
   50% {
     opacity: 50%;
-  }
-  100% {
   }
 }
 
@@ -332,8 +328,7 @@ td div button {
 }
 
 #add-new-student {
-  left: 50%;
-  translate: -50% 50%;
+  margin: auto;
   width: 500px;
 }
 
@@ -342,43 +337,44 @@ td div button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  button {
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-    width: 35px;
-    height: 35px;
-    margin-left: auto;
-  }
+#add-new-student .header-of-dialog button {
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  width: 35px;
+  height: 35px;
+  margin-left: auto;
 }
 
 #add-new-student .form {
   border-top: 3px solid black;
   border-bottom: 3px solid black;
-  table {
-    border: none;
-  }
-  table tr td {
-    border: none;
-    text-align: left;
-  }
-  select,
-  input {
-    width: 100%;
-  }
+}
+
+#add-new-student .form table {
+  border: none;
+}
+#add-new-student .form table tr td {
+  border: none;
+  text-align: left;
+}
+#add-new-student .form select,
+#add-new-student .form input {
+  width: 100%;
 }
 
 #add-new-student .footer-of-dialog {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
+}
 
-  button {
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-    margin: 0 0.5rem;
-    padding: 1%;
-  }
+#add-new-student .footer-of-dialog button {
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  margin: 0 0.5rem;
+  padding: 1%;
 }
