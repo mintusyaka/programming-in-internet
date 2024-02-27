@@ -327,19 +327,20 @@ td div button {
   }
 }
 
-#add-new-student {
+#add-new-student,
+#delete-student {
   margin: auto;
   width: 500px;
 }
 
-#add-new-student .header-of-dialog {
+.header-of-dialog {
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#add-new-student .header-of-dialog button {
+.header-of-dialog button {
   cursor: pointer;
   appearance: none;
   background-color: inherit;
@@ -348,30 +349,31 @@ td div button {
   margin-left: auto;
 }
 
-#add-new-student .form {
+.form {
+  padding: 10px;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
 }
 
-#add-new-student .form table {
+.form table {
   border: none;
 }
-#add-new-student .form table tr td {
+.form table tr td {
   border: none;
   text-align: left;
 }
-#add-new-student .form select,
-#add-new-student .form input {
+.form select,
+.form input {
   width: 100%;
 }
 
-#add-new-student .footer-of-dialog {
+.footer-of-dialog {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
 }
 
-#add-new-student .footer-of-dialog button {
+.footer-of-dialog button {
   cursor: pointer;
   appearance: none;
   background-color: inherit;
