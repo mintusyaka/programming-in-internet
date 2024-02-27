@@ -1,9 +1,27 @@
 const btnAddStudent = document.getElementById("btnAdd");
 const btnOkAddStudent = document.getElementById("btnOkAddStudent");
+const deleteStudentDialog = document.getElementById("delete-student");
+const btnOkDeleteStudent = document.getElementById("btnOkDeleteStudent");
 
 const addNewStudentDialog = document.getElementById("add-new-student");
 const btnNewStudentDialogExit =
   addNewStudentDialog.getElementsByClassName("close");
+const btnDeleteStudentExit =
+  deleteStudentDialog.getElementsByClassName("close");
+
+const btnDeleteStudent = document.getElementsByClassName("btnDelete");
+
+// for (let btn of btnDeleteStudent) {
+//   btn.addEventListener("click", () => {
+//     deleteStudentDialog.showModal();
+//   });
+// }
+
+for (let btn of btnDeleteStudentExit) {
+  btn.addEventListener("click", () => {
+    deleteStudentDialog.close();
+  });
+}
 
 for (let btn of btnNewStudentDialogExit) {
   btn.addEventListener("click", () => {
@@ -50,6 +68,7 @@ btnOkAddStudent.addEventListener("click", () => {
   newTd.innerHTML = selectedGroup.options[selectedGroup.selectedIndex].text;
   newRow.appendChild(newTd);
   newTd = document.createElement("td");
+  newTd.setAttribute("class", "name");
   newTd.innerHTML = firstName.value + " " + secondName.value;
   newRow.appendChild(newTd);
 
@@ -59,7 +78,7 @@ btnOkAddStudent.addEventListener("click", () => {
   newRow.appendChild(newTd);
 
   newTd = document.createElement("td");
-  // newTd.innerHTML = formattedDate;
+  newTd.innerHTML = formattedDate;
 
   newRow.appendChild(newTd);
 
@@ -98,5 +117,16 @@ btnOkAddStudent.addEventListener("click", () => {
 });
 
 function deleteStudent(btn) {
-  btn.parentNode.parentNode.parentNode.remove();
+  deleteStudentDialog.showModal();
+  const txtDeleteStudent = deleteStudentDialog.getElementsByClassName("form");
+  txtDeleteStudent[0].innerHTML =
+    "Are you sure you want to delete user " +
+    btn.parentNode.parentNode.parentNode.getElementsByClassName("name")[0]
+      .innerHTML +
+    "?";
+
+  btnOkDeleteStudent.addEventListener("click", () => {
+    btn.parentNode.parentNode.parentNode.remove();
+    deleteStudentDialog.close();
+  });
 }

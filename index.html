@@ -14,6 +14,17 @@
     <title>Students</title>
   </head>
   <body>
+    <dialog id="delete-student">
+      <div class="header-of-dialog">
+        <h2>Delete student</h2>
+        <button type="button" class="close">X</button>
+      </div>
+      <div class="form"></div>
+      <div class="footer-of-dialog">
+        <button type="submit" class="ok" id="btnOkDeleteStudent">DELETE</button>
+        <button type="button" class="close">CANCEL</button>
+      </div>
+    </dialog>
     <dialog id="add-new-student">
       <form method="dialog" id="add-new-student-form" onsubmit="return false">
         <div class="header-of-dialog">
@@ -169,7 +180,7 @@
               <input type="checkbox" name="checkbox" aria-label="checkbox" />
             </td>
             <td>PZ-26</td>
-            <td>Mintus Stanislav</td>
+            <td class="name">Mintus Stanislav</td>
             <td>Male</td>
             <td>01.10.2005</td>
             <td class="status-bull active">&bull;</td>
